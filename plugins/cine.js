@@ -2045,7 +2045,6 @@ const listButtons = {
 });
 
 
-const { delay } = require("@whiskeysockets/baileys");
 
 
 
