@@ -2169,7 +2169,7 @@ await conn.sendMessage(config.DINKA || from, { image: { url: sadas.data.image.re
 
 
 //newtv
-let isUploadinggg = false; // Track upload status
+let isUploadingggx = false; // Track upload status
 
 
 
@@ -2188,7 +2188,7 @@ cmd({
         return await reply('*Please provide a direct URL!*');
     }
 console.log('Input', q)
-    if (isUploadinggg) {
+    if (isUploadingggx) {
         return await conn.sendMessage(from, { 
             text: '*A Episode is already being uploaded. Please wait a while before uploading another one.* ⏳', 
             quoted: mek 
@@ -2197,7 +2197,7 @@ console.log('Input', q)
 
     let attempts = 0;
     const maxRetries = 5;
-    isUploadinggg = false;
+    isUploadingggx = false;
 
     
     while (attempts < maxRetries) {
@@ -2262,7 +2262,7 @@ console.log ('Final_Dl:', mediaUrl)
         await conn.sendMessage(from, { text: "*Error fetching at this moment. Please try again later ❗*" }, { quoted: mek });
     }
 
-    isUploadinggg = false;
+    isUploadinggggx = false;
 });
 
 //newtv
