@@ -72,13 +72,13 @@ if(!q) return await reply('*Please enter a movie name! 🎬*')
 // 🔗 Use your new API
 const { data: urll } = await axios.get(`https://visper-md-ap-is.vercel.app/movie/sinhalasub/search?q=${encodeURIComponent(q)}`);
 
-if (!urll || urll.length === 0) {
+if (!urll || urll.result.length === 0) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, { text: '*No results found ❌*' }, { quoted: mek });
 }
 
 // 🧩 Create result list
-let srh = urll.map(v => ({
+let srh = urll.result.map(v => ({
     title: v.Title.replace("Sinhala Subtitles | සිංහල උපසිරසි සමඟ", ""),
     description: '',
     rowId: prefix + 'sininfo ' + v.Link
